@@ -33,3 +33,8 @@ ilja.solovejs2@mail.dcu.ie
 denys.maksymov2@mail.dcu.ie  
 **P4 – Danylo Dudar**  
 danylo.dudar2@mail.dcu.ie
+
+## Development Workflow  
+- Main development branch: dev  
+- Feature branches created from dev  
+- Final version merged into main
