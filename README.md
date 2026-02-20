@@ -63,3 +63,13 @@ This project is a Django based web application developed for CSC1025.
 The website focuses on Food Systems and Agriculture and allows users to explore farms and their associated agricultural products.  
 
 Users can browse farms, view product details, add new products, and filter products by organic status. The project demonstrates the use of Django models, views, templates, URL routing, and database relationships, while applying agile project management using Trello and version control using GitLab.
+
+## Project Team Members
+- P1 Vasileios Papakostas 
+vasileios.papakostas2@mail.dcu.ie 
+- P2 Ilja Solovejs 
+ilja.solovejs2@mail.dcu.ie 
+- P3 Denys Maksymov 
+denys.maksymov2@mail.dcu.ie
+- P4 Danylo Dudar 
+danylo.dudar2@mail.dcu.ie 
