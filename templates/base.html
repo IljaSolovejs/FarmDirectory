@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Farm & Product Directory{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="{% url 'home' %}">
+                <span class="brand-mark">🌿</span>
+                <span>
+                    <strong>Farm & Product Directory</strong>
+                    <small>Food Systems and Agriculture</small>
+                </span>
+            </a>
+
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'farm_list' %}">Farm Directory</a>
+                <a href="{% url 'request_info' %}">Request Further Information</a>
+                <a href="{% url 'references' %}">References</a>
+                <a href="{% url 'about' %}">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>CSC1025 Group Project · Group A123</p>
+            <p>Built with Django for an academic web development project.</p>
+        </div>
+    </footer>
+</body>
+</html>

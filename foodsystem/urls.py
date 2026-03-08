@@ -17,8 +17,13 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from farms import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name='home'),
     path('farms/', include('farms.urls')),
+    path('request-info/', views.request_info, name='request_info'),
+    path('references/', views.references, name='references'),
+    path('about/', views.about, name='about'),
 ]

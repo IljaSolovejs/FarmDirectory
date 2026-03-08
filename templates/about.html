@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block title %}About | Farm & Product Directory{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <p class="eyebrow">About the Team</p>
+    <h1>Project contributors</h1>
+    <p class="lead">Authors are listed in alphabetical order by surname.</p>
+</section>
+
+<section class="card-grid">
+    <article class="content-card">
+        <div class="card-topline">Frontend Layout and Styling</div>
+        <h2>Danylo Dudar</h2>
+        <p><strong>Email:</strong> <a class="text-link" href="mailto:danylo.dudar2@mail.dcu.ie">danylo.dudar2@mail.dcu.ie</a></p>
+        <p><strong>Group ID:</strong> 44980</p>
+        <p><strong>Lab Location:</strong> GLA.L128</p>
+        <p>
+            Contributed to the research and selection of the technology stack and to the GitLab README.md file.
+            Expected future contribution: focus on Quality Assurance and Testing, including test cases,
+            functional and non-functional testing, and bug documentation.
+        </p>
+    </article>
+
+    <article class="content-card">
+        <div class="card-topline">Project Management</div>
+        <h2>Denys Maksymov</h2>
+        <p><strong>Email:</strong> <a class="text-link" href="mailto:denys.maksymov2@mail.dcu.ie">denys.maksymov2@mail.dcu.ie</a></p>
+        <p><strong>Group ID:</strong> 42880</p>
+        <p><strong>Lab Location:</strong> GLA.L128</p>
+        <p>
+            Chair of the group. Created and configured the Trello board, led the planning of the initial
+            project schedule, established meeting logistics, and helped define the project scope and user stories.
+            Expected future contribution: continue as Project Manager and coordinate meetings and task distribution.
+        </p>
+    </article>
+
+    <article class="content-card">
+        <div class="card-topline">Frontend Support and Layout Planning</div>
+        <h2>Vasileios Papakostas</h2>
+        <p><strong>Email:</strong> <a class="text-link" href="mailto:vasileios.papakostas2@dcu.ie">vasileios.papakostas2@dcu.ie</a></p>
+        <p><strong>Group ID:</strong> 20170</p>
+        <p><strong>Lab Location:</strong> GLA.L128</p>
+        <p>
+            Recorder of the group. Took on the initial setup of the GitLab repository and created the README.md structure.
+            Contributed to the initial review of web design best practices and the shared repository structure.
+            Expected future contribution: backend logic and database integration as Lead Developer.
+        </p>
+    </article>
+
+    <article class="content-card">
+        <div class="card-topline">Navigation and Layout Consistency</div>
+        <h2>Ilja Solovejs</h2>
+        <p><strong>Email:</strong> <a class="text-link" href="mailto:ilja.solovejs2@mail.dcu.ie">ilja.solovejs2@mail.dcu.ie</a></p>
+        <p><strong>Group ID:</strong> 20296</p>
+        <p><strong>Lab Location:</strong> GLA.L128</p>
+        <p>
+            Reader of the group. Contributed to early-stage planning of the website structure, focusing on
+            layout consistency and navigation planning. Researched project ideas, colour schemes, navigation
+            patterns, website layouts, and contributed to the README.md file.
+        </p>
+    </article>
+</section>
+
+<section class="content-card">
+    <h2>Group roles</h2>
+    <table class="report-table">
+        <tr>
+            <th>Role</th>
+            <th>Person Assigned</th>
+        </tr>
+        <tr>
+            <td>Chair</td>
+            <td>Denys Maksymov</td>
+        </tr>
+        <tr>
+            <td>Timekeeper</td>
+            <td>Danylo Dudar</td>
+        </tr>
+        <tr>
+            <td>Recorder</td>
+            <td>Vasileios Papakostas</td>
+        </tr>
+        <tr>
+            <td>Reader</td>
+            <td>Ilja Solovejs</td>
+        </tr>
+    </table>
+</section>
+
+<section class="content-card">
+    <h2>How the team worked</h2>
+    <p>
+        The group split responsibilities across database/models, backend views and logic,
+        routing/navigation, and frontend templates/CSS. This supported parallel work and
+        kept ownership of each part of the project clear.
+    </p>
+</section>
+
+{% include 'partials/page_meta.html' with references=references authors=authors %}
+{% endblock %}

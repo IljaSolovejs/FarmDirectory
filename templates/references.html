@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}References | Farm & Product Directory{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <p class="eyebrow">Research and Documentation</p>
+    <h1>All site references</h1>
+    <p class="lead">Displayed in alphabetical order in an APA-like style.</p>
+</section>
+
+<section class="content-card">
+    <ol class="reference-list big-list">
+        {% for reference in all_references %}
+            <li>{{ reference }}</li>
+        {% endfor %}
+    </ol>
+</section>
+
+{% include 'partials/page_meta.html' with references=references authors=authors %}
+{% endblock %}

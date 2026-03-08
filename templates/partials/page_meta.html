@@ -1,0 +1,25 @@
+<section class="page-meta" aria-label="Page references and authors">
+    <div class="meta-grid">
+        <section class="meta-card">
+            <h2>References</h2>
+            <ol class="reference-list">
+                {% for reference in references %}
+                    <li>{{ reference }}</li>
+                {% empty %}
+                    <li>No references listed for this page.</li>
+                {% endfor %}
+            </ol>
+        </section>
+
+        <section class="meta-card">
+            <h2>Authors</h2>
+            <ul class="author-list">
+                {% for author in authors %}
+                    <li>{{ author }}</li>
+                {% empty %}
+                    <li>No authors listed for this page.</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</section>

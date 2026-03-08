@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Page Not Found | Farm & Product Directory{% endblock %}
+
+{% block content %}
+<section class="content-card error-card">
+    <p class="eyebrow">Error 404</p>
+    <h1>That page does not exist</h1>
+    <p class="lead">The page you tried to open could not be found. Please use the navigation menu to continue browsing the site.</p>
+    <a class="button button-primary" href="{% url 'home' %}">Return to home page</a>
+</section>
+
+{% include 'partials/page_meta.html' with references=references authors=authors %}
+{% endblock %}
