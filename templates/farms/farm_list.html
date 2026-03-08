@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farm Directory</title>
+</head>
+<body>
+    <h1>Farm Directory</h1>
+
+    {% for farm in farms %}
+        <div>
+            <h2>{{ farm.name }}</h2>
+            <p><strong>Location:</strong> {{ farm.location }}</p>
+            <p>{{ farm.description }}</p>
+        </div>
+        <hr>
+    {% empty %}
+        <p>No farms available.</p>
+    {% endfor %}
+</body>
+</html>
