@@ -9,7 +9,10 @@ SITE_AUTHORS = [
 ]
 
 SITE_REFERENCES = [
-    'DCU CSC1025 group project specification (2026)',
+    'J. McKenna, "CSC1025 Group Project Specification," Dublin City University, 2026.',
+    'W3C Web Accessibility Initiative, "Tips on Designing for Web Accessibility," W3C, 2024. [Online]. Available: https://www.w3.org/WAI/tips/designing/',
+    'Brookfield Farm, "Brookfield Farm," [Online]. Available: https://www.brookfield.farm/',
+    'The Happy Pear, "Happy Pear Farm," [Online]. Available: https://farm.thehappypear.ie/people/happy-pear-farm',
 ]
 
 
@@ -50,7 +53,7 @@ def request_info(request):
 def about(request):
     return render(request, 'about.html', {
         'authors': SITE_AUTHORS,
-        'references': [],
+        'references': SITE_REFERENCES,
     })
 
 

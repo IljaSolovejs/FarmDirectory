@@ -6,7 +6,7 @@
 <section class="page-header">
     <p class="eyebrow">Research and Documentation</p>
     <h1>All site references</h1>
-    <p class="lead">Displayed in alphabetical order in an APA-like style.</p>
+    <p class="lead">Displayed in alphabetical order in an IEEE-like style.</p>
 </section>
 
 <section class="content-card">
@@ -17,5 +17,13 @@
     </ol>
 </section>
 
-{% include 'partials/page_meta.html' with references=references authors=authors %}
+<section class="content-card">
+    <h2>Authors</h2>
+    <ul class="author-list">
+        {% for author in authors %}
+            <li>{{ author }}</li>
+        {% endfor %}
+    </ul>
+</section>
+
 {% endblock %}
