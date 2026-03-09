@@ -34,7 +34,18 @@ denys.maksymov2@mail.dcu.ie
 **P4 – Danylo Dudar**  
 danylo.dudar2@mail.dcu.ie
 
-## Development Workflow  
-- Main development branch: dev  
-- Feature branches created from dev  
+## Development Workflow
+- Main development branch: dev
+- Feature branches created from dev
 - Final version merged into main
+
+## Hidden Feature: Farm Plot Calculator
+Visit a URL in the format `/<length>/<width>/<yield>/` to access the Farm Plot Calculator.
+
+- **length** - plot length in metres (positive integer)
+- **width** - plot width in metres (positive integer)
+- **yield** - estimated crop yield in kg per m² (positive integer)
+
+Example: `http://127.0.0.1:8000/10/5/3/`
+
+This will calculate the total plot area and estimated harvest, and suggest a suitable crop based on the yield rate.

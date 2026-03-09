@@ -63,3 +63,24 @@ def references(request):
         'authors': SITE_AUTHORS,
         'references': [],
     })
+
+
+def plot_calculator(request, length, width, yield_per_m2):
+    area = length * width
+    estimated_yield = area * yield_per_m2
+
+    if yield_per_m2 <= 2:
+        crop_suggestion = 'Wheat or Barley'
+    elif yield_per_m2 <= 5:
+        crop_suggestion = 'Potatoes or Carrots'
+    else:
+        crop_suggestion = 'Lettuce or Spinach'
+
+    return render(request, 'plot_calculator.html', {
+        'length': length,
+        'width': width,
+        'yield_per_m2': yield_per_m2,
+        'area': area,
+        'estimated_yield': estimated_yield,
+        'crop_suggestion': crop_suggestion,
+    })
