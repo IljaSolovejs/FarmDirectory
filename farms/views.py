@@ -1,6 +1,17 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Farm, Product
 
+SITE_AUTHORS = [
+    'Danylo Dudar',
+    'Denys Maksymov',
+    'Vasileios Papakostas',
+    'Ilja Solovejs',
+]
+
+SITE_REFERENCES = [
+    'DCU CSC1025 group project specification (2026)',
+]
+
 
 def home(request):
     farms = Farm.objects.all()
@@ -28,3 +39,24 @@ def farm_detail(request, farm_id):
 def product_detail(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     return render(request, 'farms/product_detail.html', {'product': product})
+
+def request_info(request):
+    submitted = False
+    if request.method == 'POST':
+        submitted = True
+    return render(request, 'request_info.html', {'submitted': submitted})
+
+
+def about(request):
+    return render(request, 'about.html', {
+        'authors': SITE_AUTHORS,
+        'references': [],
+    })
+
+
+def references(request):
+    return render(request, 'references.html', {
+        'all_references': SITE_REFERENCES,
+        'authors': SITE_AUTHORS,
+        'references': [],
+    })
