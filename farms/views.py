@@ -36,7 +36,10 @@ def farm_list(request):
 def farm_detail(request, farm_id):
     farm = get_object_or_404(Farm, id=farm_id)
     products = Product.objects.filter(farm=farm)
-    return render(request, 'farms/farm_detail.html', {'farm': farm, 'products': products})
+    organic_filter = request.GET.get('organic')
+    if organic_filter == 'true':
+        products = products.filter(is_organic=True)
+    return render(request, 'farms/farm_detail.html', {'farm': farm, 'products': products, 'organic_filter': organic_filter})
 
 
 def product_detail(request, product_id):
