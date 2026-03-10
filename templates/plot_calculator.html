@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Farm Plot Calculator{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <p class="eyebrow">Hidden Feature</p>
+    <h1>Farm Plot Calculator</h1>
+    <p class="lead">Estimating yield for a {{ length }}m &times; {{ width }}m plot with {{ yield_per_m2 }} kg/m&sup2; yield rate.</p>
+</section>
+
+<section class="card-grid">
+    <article class="card">
+        <h2>Plot Dimensions</h2>
+        <p><strong>Length:</strong> {{ length }} m</p>
+        <p><strong>Width:</strong> {{ width }} m</p>
+        <p><strong>Total Area:</strong> {{ area }} m&sup2;</p>
+    </article>
+
+    <article class="card">
+        <h2>Yield Estimate</h2>
+        <p><strong>Yield rate:</strong> {{ yield_per_m2 }} kg/m&sup2;</p>
+        <p><strong>Estimated harvest:</strong> {{ estimated_yield }} kg</p>
+        <p><strong>Suggested crop:</strong> {{ crop_suggestion }}</p>
+    </article>
+</section>
+
+<a class="button-link" href="{% url 'home' %}">Back to Home</a>
+{% endblock %}

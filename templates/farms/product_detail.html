@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h1>{{ product.name }}</h1>
+    <p><strong>Farm:</strong> {{ product.farm.name }}</p>
+</section>
+
+<section class="card">
+    <h2>About this Product</h2>
+    <p>{{ product.description }}</p>
+</section>
+
+<a class="button-link" href="{% url 'farm_detail' product.farm.id %}">Back to {{ product.farm.name }}</a>
+
+{% endblock %}

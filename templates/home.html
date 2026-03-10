@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Home | Farm & Product Directory{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div>
+        <p class="eyebrow">CSC1025 Group Project</p>
+        <h1>Explore local farms and agricultural products in one tidy directory.</h1>
+        <p class="lead">
+            This website introduces farms, highlights their products, and supports learning about food systems,
+            agriculture, and sustainable production.
+        </p>
+        <div class="button-row">
+            <a class="button button-primary" href="{% url 'farm_list' %}">Browse farms</a>
+            <a class="button button-secondary" href="{% url 'request_info' %}">Request more information</a>
+        </div>
+    </div>
+
+    <aside class="info-panel">
+        <h2>What you can do here</h2>
+        <ul>
+            <li>View a farm directory</li>
+            <li>Read farm descriptions</li>
+            <li>Check individual farm detail pages</li>
+            <li>See contributor and reference information</li>
+        </ul>
+    </aside>
+</section>
+
+<section class="content-card">
+    <h2>Project overview</h2>
+    <p>
+        The Farm &amp; Product Directory is a Django-based academic project. It demonstrates routing, templates,
+        model-driven content, shared layouts, and consistent visual styling across a small information website.
+    </p>
+</section>
+{% endblock %}

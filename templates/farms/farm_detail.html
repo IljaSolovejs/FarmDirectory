@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}{{ farm.name }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h1>{{ farm.name }}</h1>
+    <p><strong>Location:</strong> {{ farm.location }}</p>
+</section>
+
+<section class="card">
+    <h2>About this Farm</h2>
+    <p>{{ farm.description }}</p>
+</section>
+
+<section>
+    <h2>Products</h2>
+    <div style="margin-bottom: 1rem;">
+        {% if organic_filter == 'true' %}
+            <a class="button-link" href="?">Show All</a>
+        {% else %}
+            <a class="button-link" href="?organic=true">Show Organic Only</a>
+        {% endif %}
+    </div>
+    <div class="card-grid">
+        {% for product in products %}
+            <article class="card">
+                <h3>{{ product.name }}</h3>
+                {% if product.is_organic %}<p><strong>Organic</strong></p>{% endif %}
+                <p>{{ product.description }}</p>
+                <a class="button-link" href="{% url 'product_detail' product.id %}">View product</a>
+            </article>
+        {% empty %}
+            <article class="card">
+                <p>No products listed for this farm.</p>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+
+<a class="button-link" href="{% url 'farm_list' %}">Back to Farm Directory</a>
+
+{% endblock %}

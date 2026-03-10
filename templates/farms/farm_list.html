@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Farm Directory{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h1>Farm Directory</h1>
+    <p>Browse farms included in the Food Systems and Agriculture directory.</p>
+</section>
+
+<section class="card-grid">
+    {% for farm in farms %}
+        <article class="card">
+            <h2>{{ farm.name }}</h2>
+            <p><strong>Location:</strong> {{ farm.location }}</p>
+            <p>{{ farm.description }}</p>
+
+            {% if farm.id %}
+                <a class="button-link" href="/farms/{{ farm.id }}/">View details</a>
+            {% endif %}
+        </article>
+    {% empty %}
+        <article class="card">
+            <p>No farms available.</p>
+        </article>
+    {% endfor %}
+</section>
+
+{% endblock %}

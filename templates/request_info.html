@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Request Further Information | Farm & Product Directory{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <p class="eyebrow">Contact Form</p>
+    <h1>Request further information</h1>
+    <p class="lead">Use this form to ask for more information about one of the topics covered on the site.</p>
+</section>
+
+<section class="content-card form-card">
+    {% if submitted %}
+        <div class="success-banner">Thank you. Your request has been recorded for review.</div>
+    {% endif %}
+
+    <form method="post" class="site-form">
+        {% csrf_token %}
+        <label>
+            Full name
+            <input type="text" name="name" placeholder="Your name" required>
+        </label>
+
+        <label>
+            Email address
+            <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+
+        <label>
+            Topic
+            <select name="topic" required>
+                <option value="">Select a topic</option>
+                <option>Farm directory</option>
+                <option>Farm products</option>
+                <option>Sustainable agriculture</option>
+                <option>Food systems</option>
+            </select>
+        </label>
+
+        <label>
+            Your request
+            <textarea name="message" rows="6" placeholder="Please tell us what extra information you would like." required></textarea>
+        </label>
+
+        <button class="button button-primary" type="submit">Send request</button>
+    </form>
+</section>
+{% endblock %}
