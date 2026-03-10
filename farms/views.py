@@ -35,7 +35,15 @@ def home(request):
 
 def farm_list(request):
     farms = Farm.objects.all()
-    return render(request, 'farms/farm_list.html', {'farms': farms})
+    return render(request, 'farms/farm_list.html', {
+        'farms': farms,
+        'authors': ['Danylo Dudar'],
+        'references': [
+            'W3C Web Accessibility Initiative, "Tips on Designing for Web Accessibility," W3C, 2024.',
+            'P. Laubheimer, "Cards: UI-Component Definition," Nielsen Norman Group, 2016.',
+            'Mozilla Developer Network, "CSS: Cascading Style Sheets," 2024.',
+        ],
+    })
 
 
 def farm_detail(request, farm_id):
@@ -44,12 +52,28 @@ def farm_detail(request, farm_id):
     organic_filter = request.GET.get('organic')
     if organic_filter == 'true':
         products = products.filter(is_organic=True)
-    return render(request, 'farms/farm_detail.html', {'farm': farm, 'products': products, 'organic_filter': organic_filter})
+    return render(request, 'farms/farm_detail.html', {
+        'farm': farm,
+        'products': products,
+        'organic_filter': organic_filter,
+        'authors': ['Vasileios Papakostas'],
+        'references': [
+            'Brookfield Farm, "Brookfield Farm."',
+            'The Happy Pear, "Happy Pear Farm."',
+            'Django Software Foundation, "Django Documentation," 2024.',
+        ],
+    })
 
 
 def product_detail(request, product_id):
     product = get_object_or_404(Product, id=product_id)
-    return render(request, 'farms/product_detail.html', {'product': product})
+    return render(request, 'farms/product_detail.html', {
+        'product': product,
+        'authors': ['Vasileios Papakostas', 'Ilja Solovejs'],
+        'references': [
+            'Django Software Foundation, "Django Documentation," 2024.',
+        ],
+    })
 
 def request_info(request):
     submitted = False
@@ -60,8 +84,12 @@ def request_info(request):
 
 def about(request):
     return render(request, 'about.html', {
-        'authors': SITE_AUTHORS,
-        'references': SITE_REFERENCES,
+        'authors': ['Denys Maksymov'],
+        'references': [
+            'J. McKenna, "CSC1025 Group Project Specification," Dublin City University, 2026.',
+            'J. Nielsen, "10 Usability Heuristics for User Interface Design," Nielsen Norman Group, 1994.',
+            'New Target, "Color Psychology in Website Design," newtarget.com, 2025.',
+        ],
     })
 
 

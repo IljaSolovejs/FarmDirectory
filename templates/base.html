@@ -34,6 +34,11 @@
     </main>
 
     <footer class="site-footer">
+        {% if references or authors %}
+        <div class="container footer-meta">
+            {% include 'partials/page_meta.html' %}
+        </div>
+        {% endif %}
         <div class="container footer-inner">
             <p>CSC1025 Group Project · Group A123</p>
             <p>Last updated: {% now "N j, Y" %}</p>

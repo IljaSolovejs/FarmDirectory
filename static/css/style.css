@@ -308,6 +308,43 @@ button {
     background: #eef4e8;
 }
 
+.footer-meta {
+    padding: 1.25rem 0 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.footer-meta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-meta-section {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-meta-label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.footer-meta-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.75rem;
+    color: var(--text-soft);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem 1rem;
+}
+
 .footer-inner {
     padding: 1.25rem 0;
     color: var(--text-soft);
