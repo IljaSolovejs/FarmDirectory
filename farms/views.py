@@ -13,6 +13,11 @@ SITE_REFERENCES = [
     'W3C Web Accessibility Initiative, "Tips on Designing for Web Accessibility," W3C, 2024. [Online]. Available: https://www.w3.org/WAI/tips/designing/',
     'Brookfield Farm, "Brookfield Farm," [Online]. Available: https://www.brookfield.farm/',
     'The Happy Pear, "Happy Pear Farm," [Online]. Available: https://farm.thehappypear.ie/people/happy-pear-farm',
+    'P. Laubheimer, "Cards: UI-Component Definition," Nielsen Norman Group, Nov. 6, 2016. [Online]. Available: https://www.nngroup.com/articles/cards-component/',
+    'J. Nielsen, "10 Usability Heuristics for User Interface Design," Nielsen Norman Group, Nov. 15, 1994. [Online]. Available: https://www.nngroup.com/articles/ten-usability-heuristics/',
+    'New Target, "Color Psychology in Website Design," newtarget.com, Nov. 10, 2025. [Online]. Available: https://www.newtarget.com/web-insights-blog/color-psychology-in-website-design/',
+    'Django Software Foundation, "Django Documentation," 2024. [Online]. Available: https://docs.djangoproject.com/',
+    'Mozilla Developer Network, "CSS: Cascading Style Sheets," 2024. [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/CSS',
 ]
 
 
