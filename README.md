@@ -1,51 +1,41 @@
-# CSC1025 – 2026 Group Project
-## Project 1 – Group A123
+# FarmDirectory
 
-## Project Title
-**Farm & Product Directory**
+A Django web application for exploring local farms and their agricultural products. Users can browse farms, view each farm's products, add new products and filter by organic status.
 
-## Project Description
-This project is a Django-based web application developed as part of the CSC1025 module. The website focuses on **Food Systems and Agriculture**, allowing users to explore farms and their associated agricultural products in a structured directory format.
+Built as a 4-person university group project at Dublin City University.
 
-Users can:
-- Browse farms
-- View product details
-- Add new products
-- Filter products by organic status
+**Tech stack:** Python | Django | HTML | CSS | SQLite | Git | Trello
 
-The project demonstrates the use of:
-- Django models
-- Views
-- Templates
-- URL routing
-- Database relationships
+## Features
+- **Farm directory:** browse all farms, each with its own detail page
+- **Product listings:** see the products sold by each farm
+- **Add products:** form-based product creation linked to a farm
+- **Organic filter:** filter products by organic status
+- **Dynamic home page:** live farm and product counts pulled from the database
+- **Farm Plot Calculator (hidden feature):** visit `/<length>/<width>/<yield>/` (e.g. `/10/5/3/`) to calculate plot area and estimated harvest, with a suggested crop based on yield
 
-The team also applied:
-- Agile project management using Trello
-- Version control using GitLab
+## My Role – Views & Logic
+- Wrote the view functions in `views.py` and the URL patterns for the farm and product detail pages
+- Built the home page with live farm and product counts from the database
+- Owned the team's Trello board and organised sprint tasks
+- Tested the site and recorded the project screencast
 
-## Project Team Members
-**P1 – Vasileios Papakostas**  
-vasileios.papakostas2@mail.dcu.ie  
-**P2 – Ilja Solovejs**  
-ilja.solovejs2@mail.dcu.ie  
-**P3 – Denys Maksymov**  
-denys.maksymov2@mail.dcu.ie  
-**P4 – Danylo Dudar**  
-danylo.dudar2@mail.dcu.ie
+## Design
+- **Card layout** for quick scanning of farms and products
+- **Persistent navigation** across all pages
+- **Earthy green/brown palette** to fit the agriculture theme
 
-## Development Workflow
-- Main development branch: dev
-- Feature branches created from dev
-- Final version merged into main
+## Team Workflow
+- Agile planning with a Trello board (backlog -> sprint -> doing -> done)
+- Git branching: feature branches -> `dev` -> protected `main`, integrated through merge requests
 
-## Hidden Feature: Farm Plot Calculator
-Visit a URL in the format `/<length>/<width>/<yield>/` to access the Farm Plot Calculator.
+## Run Locally
+```bash
+pip install django
+python manage.py migrate
+python manage.py runserver
+```
+Then open http://127.0.0.1:8000
 
-- **length** - plot length in metres (positive integer)
-- **width** - plot width in metres (positive integer)
-- **yield** - estimated crop yield in kg per m² (positive integer)
-
-Example: `http://127.0.0.1:8000/10/5/3/`
-
-This will calculate the total plot area and estimated harvest, and suggest a suitable crop based on the yield rate.
+## Team
+Vasileios Papakostas (models & database) | Ilja Solovejs (views & logic) | Danylo Dudar (URLs & navigation) | Denys Maksymov (templates & CSS)
